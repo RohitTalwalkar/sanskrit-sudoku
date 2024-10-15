@@ -21,6 +21,11 @@ export const Board = () => {
           <div key={index_1}>
             {row.map((num, index_2) => (
               <div
+                onClick={() => {
+                  const updatedBoard = JSON.parse(JSON.stringify(boardState));
+                  updatedBoard[index_1][index_2]++;
+                  setBoardState(updatedBoard);
+                }}
                 className={`board-p p_${index_1}_${index_2} ${
                   index_2 === 0
                     ? "left_side"
@@ -30,7 +35,7 @@ export const Board = () => {
                 }`}
                 key={`p_${index_1}_${index_2}`}
               >
-                {`p_${index_1}_${index_2}`}
+                {boardState[index_1][index_2]}
               </div>
             ))}
           </div>
