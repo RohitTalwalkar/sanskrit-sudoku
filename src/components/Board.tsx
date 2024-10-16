@@ -23,10 +23,11 @@ export const Board = () => {
               <div
                 onClick={() => {
                   const updatedBoard = JSON.parse(JSON.stringify(boardState));
-                  updatedBoard[index_1][index_2]++;
+                  updatedBoard[index_1][index_2] =
+                    (updatedBoard[index_1][index_2] + 1) % 9;
                   setBoardState(updatedBoard);
                 }}
-                className={`board-p p_${index_1}_${index_2} ${
+                className={`noselect board-p p_${index_1}_${index_2} ${
                   index_2 === 0
                     ? "left_side"
                     : index_2 === 8
@@ -35,7 +36,7 @@ export const Board = () => {
                 }`}
                 key={`p_${index_1}_${index_2}`}
               >
-                {boardState[index_1][index_2]}
+                {boardState[index_1][index_2] + 1}
               </div>
             ))}
           </div>
