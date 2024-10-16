@@ -1,19 +1,10 @@
-import { useState } from "react";
+type Props = {
+  boardState: Array<number[]>;
+  setBoardState: any;
+};
 
-const INITIAL_BOARD = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-];
-
-export const Board = () => {
-  const [boardState, setBoardState] = useState(INITIAL_BOARD);
+export const Board = (props: Props) => {
+  const { boardState, setBoardState } = props;
   return (
     <>
       {boardState.map((row, index_1) => {
