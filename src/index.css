@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.board-p {
+  display: inline-block;
+  font-size: 30px;
+  padding: 0 15px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 45px;
+
+}
+
+.board-p:hover {
+  background-color: bisque;
+}
+
+/* top row */
+div[class*="p_0"] {
+  border-top: 5px solid black;
+}
+
+/* bottom row */
+div[class*="p_8"] {
+  border-bottom: 5px solid black;
+}
+
+div[class*="p_0_2"], 
+div[class*="p_1_2"],
+div[class*="p_2_2"],
+div[class*="p_3_2"],
+div[class*="p_4_2"],
+div[class*="p_5_2"],
+div[class*="p_6_2"],
+div[class*="p_7_2"],
+div[class*="p_8_2"],
+
+div[class*="p_0_5"], 
+div[class*="p_1_5"],
+div[class*="p_2_5"],
+div[class*="p_3_5"],
+div[class*="p_4_5"],
+div[class*="p_5_5"],
+div[class*="p_6_5"],
+div[class*="p_7_5"],
+div[class*="p_8_5"]
+{
+  border-right: 5px solid black;
+}
+
+
+div[class*="p_2_0"],
+div[class*="p_2_1"],
+div[class*="p_2_2"],
+div[class*="p_2_3"],
+div[class*="p_2_4"],
+div[class*="p_2_5"],
+div[class*="p_2_6"],
+div[class*="p_2_7"],
+div[class*="p_2_8"],
+
+div[class*="p_5_0"],
+div[class*="p_5_1"],
+div[class*="p_5_2"],
+div[class*="p_5_3"],
+div[class*="p_5_4"],
+div[class*="p_5_5"],
+div[class*="p_5_6"],
+div[class*="p_5_7"],
+div[class*="p_5_8"]
+{
+  border-bottom: 5px solid black;
+}
+
+.left_side {
+  border-left: 5px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.right_side {
+  border-right: 5px solid black;
+  border-bottom: 1px solid black;
+}
+
+.middle_side {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
