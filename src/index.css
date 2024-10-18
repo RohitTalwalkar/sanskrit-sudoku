@@ -95,14 +95,12 @@ div[class*="p_5_8"]
   border-bottom: 5px solid black;
 }
 
-/* left side */
 .left_side {
   border-left: 5px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
 }
 
-/* right side */
 .right_side {
   border-right: 5px solid black;
   border-bottom: 1px solid black;
