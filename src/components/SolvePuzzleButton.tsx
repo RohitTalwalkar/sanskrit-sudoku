@@ -9,7 +9,6 @@ export const SolvePuzzleButton = (props: any) => {
   const { boardState, setBoardState } = props;
 
   const solvePuzzle = () => {
-    // 3 x 3 = 9
     const solver = new SudokuSolver({ childMatrixWidth: 3 });
     const solverInput = [] as ISudokuBoardData;
     const solvedBoard = [] as ISudokuBoardData;
