@@ -21,13 +21,14 @@ const INITIAL_BOARD = [
 function App() {
   const [boardState, setBoardState] = useState(INITIAL_BOARD);
   const [solution, setSolution] = useState(INITIAL_BOARD);
+  const [cellsLeft, setCellsLeft] = useState(100);
 
   return (
     <div className="App">
-      <Board {...{ boardState, setBoardState }} />
+      <Board {...{ boardState, setBoardState, solution, setCellsLeft }} />
       <PuzzleButton {...{ setBoardState, setSolution }} />
       <SolvePuzzleButton {...{ boardState, setBoardState }} />
-      <DisplayShlok percentComplete={30} />
+      <DisplayShlok cellsLeft={cellsLeft} />
     </div>
   );
 }
