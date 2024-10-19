@@ -27,7 +27,7 @@ function App() {
       <Board {...{ boardState, setBoardState }} />
       <PuzzleButton {...{ setBoardState, setSolution }} />
       <SolvePuzzleButton {...{ boardState, setBoardState }} />
-      <DisplayShlok />
+      <DisplayShlok percentComplete={30} />
     </div>
   );
 }
