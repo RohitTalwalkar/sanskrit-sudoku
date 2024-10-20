@@ -1,12 +1,30 @@
+import { useState } from "react";
+
 type Props = {
   boardState: Array<number[]>;
+  solution: Array<number[]>;
   setBoardState: any;
 };
 
 export const Board = (props: Props) => {
-  const { boardState, setBoardState } = props;
+  const { boardState, setBoardState, solution } = props;
+  const [showGuide, setShowGuide] = useState("unchecked");
+  const toggleGuide = (checkValue: string) => {
+    if (checkValue === "checked") {
+      setShowGuide("unchecked");
+      return;
+    }
+    setShowGuide("checked");
+  };
   return (
     <>
+      <label htmlFor="show-guide">Show guide: </label>
+      <input
+        name="show-guide"
+        type="checkbox"
+        value={showGuide}
+        onClick={(e) => toggleGuide((e.target as any).value)}
+      />
       {boardState.map((row, index_1) => {
         return (
           <div key={index_1}>
@@ -24,10 +42,17 @@ export const Board = (props: Props) => {
                     : index_2 === 8
                     ? "right_side"
                     : "middle_side"
+                } ${
+                  showGuide === "unchecked"
+                    ? ""
+                    : solution[index_1][index_2] ===
+                      boardState[index_1][index_2]
+                    ? "correct"
+                    : "wrong"
                 }`}
                 key={`p_${index_1}_${index_2}`}
               >
-                {boardState[index_1][index_2] + 1}
+                {num + 1}
               </div>
             ))}
           </div>

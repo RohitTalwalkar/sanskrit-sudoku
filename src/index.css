@@ -34,9 +34,6 @@ code {
 
 }
 
-.board-p:hover {
-  background-color: bisque;
-}
 
 /* top row */
 div[class*="p_0"] {
@@ -109,4 +106,18 @@ div[class*="p_5_8"]
 .middle_side {
   border-bottom: 1px solid black;
   border-right: 1px solid black;
+}
+
+.correct {
+  background-color: rgba(200, 200, 255, 1);
+}
+.correct:hover {
+  background-color: rgba(100, 100, 255, 1);
+}
+
+.wrong {
+  background-color: rgba(255, 200, 200, 1);
+}
+.wrong:hover {
+  background-color: rgba(255, 100, 100, 1);
 }

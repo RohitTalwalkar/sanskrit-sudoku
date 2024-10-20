@@ -15,7 +15,16 @@ export const PuzzleButton = (props: any) => {
         boardRow = [];
       }
     }
-    setBoardState(newBoard);
+    let solvedBoard = [] as Array<number[]>;
+    boardRow = [];
+    for (let item of puzzleBoard.solution) {
+      boardRow.push(item);
+      if (boardRow.length === 9) {
+        solvedBoard.push([...boardRow]);
+        boardRow = [];
+      }
+    }
+    setBoardState(newBoard, solvedBoard);
   };
   return (
     <input type="button" onClick={generateNewPuzzle} value={"New puzzle"} />
