@@ -1,7 +1,7 @@
 import { SudokuCreator } from "@algorithm.ts/sudoku";
 
 export const PuzzleButton = (props: any) => {
-  const { setBoardState, setSolution } = props;
+  const { setBoardState } = props;
   const generateNewPuzzle = () => {
     // 3 x 3 = 9
     const creator = new SudokuCreator({ childMatrixWidth: 3 });
@@ -24,8 +24,7 @@ export const PuzzleButton = (props: any) => {
         boardRow = [];
       }
     }
-    setSolution(solvedBoard);
-    setBoardState(newBoard);
+    setBoardState(newBoard, solvedBoard);
   };
   return (
     <input type="button" onClick={generateNewPuzzle} value={"New puzzle"} />

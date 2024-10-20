@@ -1,14 +1,30 @@
+import { useState } from "react";
+
 type Props = {
   boardState: Array<number[]>;
   solution: Array<number[]>;
   setBoardState: any;
-  setCellsLeft: any;
 };
 
 export const Board = (props: Props) => {
-  const { boardState, setBoardState, solution, setCellsLeft } = props;
+  const { boardState, setBoardState, solution } = props;
+  const [showGuide, setShowGuide] = useState("unchecked");
+  const toggleGuide = (checkValue: string) => {
+    if (checkValue === "checked") {
+      setShowGuide("unchecked");
+      return;
+    }
+    setShowGuide("checked");
+  };
   return (
     <>
+      <label htmlFor="show-guide">Show guide: </label>
+      <input
+        name="show-guide"
+        type="checkbox"
+        value={showGuide}
+        onClick={(e) => toggleGuide((e.target as any).value)}
+      />
       {boardState.map((row, index_1) => {
         return (
           <div key={index_1}>
@@ -19,15 +35,6 @@ export const Board = (props: Props) => {
                   updatedBoard[index_1][index_2] =
                     (updatedBoard[index_1][index_2] + 1) % 9;
                   setBoardState(updatedBoard);
-                  let cellsLeft = 0;
-                  for (let i = 0; i < 9; i++) {
-                    for (let j = 0; j < 9; j++) {
-                      if (updatedBoard[i][j] !== solution[i][j]) {
-                        cellsLeft++;
-                      }
-                    }
-                  }
-                  setCellsLeft(cellsLeft);
                 }}
                 className={`noselect board-p p_${index_1}_${index_2} ${
                   index_2 === 0
@@ -36,13 +43,16 @@ export const Board = (props: Props) => {
                     ? "right_side"
                     : "middle_side"
                 } ${
-                  solution[index_1][index_2] === boardState[index_1][index_2]
+                  showGuide === "unchecked"
+                    ? ""
+                    : solution[index_1][index_2] ===
+                      boardState[index_1][index_2]
                     ? "correct"
                     : "wrong"
                 }`}
                 key={`p_${index_1}_${index_2}`}
               >
-                {boardState[index_1][index_2] + 1}
+                {num + 1}
               </div>
             ))}
           </div>
