@@ -67,9 +67,7 @@ export const DisplayShlok = (props: DisplayShlokProps) => {
   return (
     <>
       {DATA[0].map((lineOfText, index) => (
-        <div
-          style={{ width: "100vh", display: "flex", justifyContent: "center" }}
-        >
+        <div>
           {lineOfText.map((char, index2) => (
             <ShlokCharacter
               key={`${index}-${index2}`}
