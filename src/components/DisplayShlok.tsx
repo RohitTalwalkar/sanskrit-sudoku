@@ -6,6 +6,10 @@ type ShlokCharacterProps = {
   showSolution: boolean;
 };
 
+const getData = () => {
+  return DATA[1];
+};
+
 const ShlokCharacter = (props: ShlokCharacterProps) => {
   const { character, showSolution } = props;
   const [guessedCharacter, setSuessedCharacter] = useState("");
@@ -55,19 +59,20 @@ type DisplayShlokProps = {
 
 export const DisplayShlok = (props: DisplayShlokProps) => {
   const { cellsLeft } = props;
-  const totalLetters = DATA[0][0].length + DATA[0][1].length;
+  const totalLetters = getData()[0].length + getData()[1].length;
   const showSolution = {} as any;
   let counter = 0;
-  for (let i = 0; i < DATA[0].length; i++) {
-    for (let j = 0; j < DATA[0][i].length; j++) {
+  for (let i = 0; i < getData().length; i++) {
+    for (let j = 0; j < getData()[i].length; j++) {
       counter++;
       showSolution[`${i}-${j}`] = counter < totalLetters - cellsLeft;
     }
   }
   return (
     <>
-      {DATA[0].map((lineOfText, index) => (
+      {getData().map((lineOfText, index) => (
         <div>
+          {lineOfText.length}
           {lineOfText.map((char, index2) => (
             <ShlokCharacter
               key={`${index}-${index2}`}
