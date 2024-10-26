@@ -6,19 +6,14 @@ import { PuzzleButton } from "./components/PuzzleButton";
 import { SolvePuzzleButton } from "./components/SolvePuzzleButton";
 import { DisplayShlok } from "./components/DisplayShlok";
 
-const INITIAL_BOARD = [
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0, 0, 0, 0],
-];
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useRoutes,
+} from "react-router-dom";
+import { INITIAL_BOARD } from "./data/sudokuBoard";
 
-function App() {
+const Game = () => {
   const [boardState, _setBoardState] = useState(INITIAL_BOARD);
   const [solution, setSolution] = useState(INITIAL_BOARD);
   const [cellsLeft, setCellsLeft] = useState(100);
@@ -44,11 +39,30 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <>
       <Board {...{ boardState, setBoardState, solution }} />
       <PuzzleButton {...{ setBoardState }} />
       <SolvePuzzleButton {...{ boardState, setBoardState }} />
       <DisplayShlok cellsLeft={cellsLeft} />
+    </>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Game />,
+  },
+  {
+    path: "/title",
+    element: <div>I am the title!!!!</div>,
+  },
+]);
+
+function App() {
+  return (
+    <div className="App">
+      <RouterProvider router={router} />
     </div>
   );
 }

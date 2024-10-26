@@ -23,17 +23,30 @@ export const Board = (props: Props) => {
         name="show-guide"
         type="checkbox"
         value={showGuide}
-        onClick={(e) => toggleGuide((e.target as any).value)}
+        onClick={(e) => {
+          toggleGuide((e.target as any).value);
+        }}
       />
       {boardState.map((row, index_1) => {
         return (
           <div key={index_1}>
             {row.map((num, index_2) => (
               <div
-                onClick={() => {
+                onClick={(e) => {
+                  console.log(
+                    (e as any).nativeEvent.offsetX,
+                    (e as any).nativeEvent.offsetY,
+                    e
+                  );
                   const updatedBoard = JSON.parse(JSON.stringify(boardState));
-                  updatedBoard[index_1][index_2] =
-                    (updatedBoard[index_1][index_2] + 1) % 9;
+                  if ((e as any).nativeEvent.offsetX >= 50) {
+                    updatedBoard[index_1][index_2] =
+                      (updatedBoard[index_1][index_2] + 1) % 9;
+                  } else {
+                    updatedBoard[index_1][index_2] =
+                      (updatedBoard[index_1][index_2] - 1) % 9;
+                  }
+
                   setBoardState(updatedBoard);
                 }}
                 className={`noselect board-p p_${index_1}_${index_2} ${
