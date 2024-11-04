@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sanskrit-sudoku/static/css/main.0ba247f5.css",
-    "main.js": "/sanskrit-sudoku/static/js/main.139ec239.js",
+    "main.js": "/sanskrit-sudoku/static/js/main.e7866307.js",
     "static/js/453.29326542.chunk.js": "/sanskrit-sudoku/static/js/453.29326542.chunk.js",
     "index.html": "/sanskrit-sudoku/index.html",
     "main.0ba247f5.css.map": "/sanskrit-sudoku/static/css/main.0ba247f5.css.map",
-    "main.139ec239.js.map": "/sanskrit-sudoku/static/js/main.139ec239.js.map",
+    "main.e7866307.js.map": "/sanskrit-sudoku/static/js/main.e7866307.js.map",
     "453.29326542.chunk.js.map": "/sanskrit-sudoku/static/js/453.29326542.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ba247f5.css",
-    "static/js/main.139ec239.js"
+    "static/js/main.e7866307.js"
   ]
 }
