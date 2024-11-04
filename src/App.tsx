@@ -59,7 +59,7 @@ const Game = () => {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/sanskrit-sudoku",
     element: <Game />,
   },
   {
