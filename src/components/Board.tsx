@@ -18,7 +18,7 @@ export const Board = (props: Props) => {
   };
   return (
     <>
-      <label htmlFor="show-guide">Show guide: </label>
+      <label htmlFor="show-guide">Show Guide: </label>
       <input
         name="show-guide"
         type="checkbox"
