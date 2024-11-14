@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sanskrit-sudoku/static/css/main.0ba247f5.css",
-    "main.js": "/sanskrit-sudoku/static/js/main.048397f7.js",
-    "static/js/453.29326542.chunk.js": "/sanskrit-sudoku/static/js/453.29326542.chunk.js",
-    "index.html": "/sanskrit-sudoku/index.html",
-    "main.0ba247f5.css.map": "/sanskrit-sudoku/static/css/main.0ba247f5.css.map",
-    "main.048397f7.js.map": "/sanskrit-sudoku/static/js/main.048397f7.js.map",
-    "453.29326542.chunk.js.map": "/sanskrit-sudoku/static/js/453.29326542.chunk.js.map"
+    "main.css": "/sudoku.mawsoft.com/static/css/main.0ba247f5.css",
+    "main.js": "/sudoku.mawsoft.com/static/js/main.9392c70a.js",
+    "static/js/453.29326542.chunk.js": "/sudoku.mawsoft.com/static/js/453.29326542.chunk.js",
+    "index.html": "/sudoku.mawsoft.com/index.html",
+    "main.0ba247f5.css.map": "/sudoku.mawsoft.com/static/css/main.0ba247f5.css.map",
+    "main.9392c70a.js.map": "/sudoku.mawsoft.com/static/js/main.9392c70a.js.map",
+    "453.29326542.chunk.js.map": "/sudoku.mawsoft.com/static/js/453.29326542.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0ba247f5.css",
-    "static/js/main.048397f7.js"
+    "static/js/main.9392c70a.js"
   ]
 }
