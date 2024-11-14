@@ -59,11 +59,11 @@ const Game = () => {
 
 const router = createBrowserRouter([
   {
-    path: "/sanskrit-sudoku",
+    path: "/",
     element: <Game />,
   },
   {
-    path: "/sanskrit-sudoku/title",
+    path: "/title",
     element: <div>I am the title!!!!</div>,
   },
 ]);
