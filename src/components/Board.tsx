@@ -44,7 +44,7 @@ export const Board = (props: Props) => {
                       (updatedBoard[index_1][index_2] + 1) % 9;
                   } else {
                     updatedBoard[index_1][index_2] =
-                      (updatedBoard[index_1][index_2] - 1) % 9;
+                      (((updatedBoard[index_1][index_2] - 1) % 9) + 9) % 9;
                   }
 
                   setBoardState(updatedBoard);
