@@ -33,7 +33,7 @@ code {
   line-height: 75px;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* small devices */
 @media only screen and (max-width: 900px) {
   .board-p {
     display: inline-block;
@@ -44,6 +44,21 @@ code {
     height: 45px;
     text-align: center;
     line-height: 45px;
+  }   
+}
+
+/* TODO fix phone screen */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .board-p {
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 15px;
+    cursor: pointer;
+    width: 36px;
+    height: 25px;
+    text-align: center;
+    line-height: 15px;
   }   
 }
 
