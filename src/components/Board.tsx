@@ -17,7 +17,7 @@ export const Board = (props: Props) => {
     setShowGuide("checked");
   };
   return (
-    <>
+    <div className="board-container">
       <label htmlFor="show-guide">Show Guide: </label>
       <input
         name="show-guide"
@@ -39,12 +39,12 @@ export const Board = (props: Props) => {
                     e
                   );
                   const updatedBoard = JSON.parse(JSON.stringify(boardState));
-                  if ((e as any).nativeEvent.offsetX >= 50) {
+                  if ((e as any).nativeEvent.offsetY >= 50) {
                     updatedBoard[index_1][index_2] =
                       (updatedBoard[index_1][index_2] + 1) % 9;
                   } else {
                     updatedBoard[index_1][index_2] =
-                      (updatedBoard[index_1][index_2] - 1) % 9;
+                      (((updatedBoard[index_1][index_2] - 1) % 9) + 9) % 9;
                   }
 
                   setBoardState(updatedBoard);
@@ -71,6 +71,6 @@ export const Board = (props: Props) => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };

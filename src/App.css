@@ -3,6 +3,14 @@
   padding: 50px;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .App {
+    padding: 40px 10px;
+  }
+  
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
