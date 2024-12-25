@@ -39,7 +39,7 @@ export const Board = (props: Props) => {
                     e
                   );
                   const updatedBoard = JSON.parse(JSON.stringify(boardState));
-                  if ((e as any).nativeEvent.offsetY <= 50) {
+                  if ((e as any).nativeEvent.offsetY >= 50) {
                     updatedBoard[index_1][index_2] =
                       (updatedBoard[index_1][index_2] + 1) % 9;
                   } else {
