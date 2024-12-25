@@ -17,7 +17,7 @@ export const Board = (props: Props) => {
     setShowGuide("checked");
   };
   return (
-    <>
+    <div className="board-container">
       <label htmlFor="show-guide">Show Guide: </label>
       <input
         name="show-guide"
@@ -71,6 +71,6 @@ export const Board = (props: Props) => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
