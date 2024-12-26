@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+  }
+  
+  .title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .centered-image {
+    width: 30%; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  
+  .button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+  }
+  
